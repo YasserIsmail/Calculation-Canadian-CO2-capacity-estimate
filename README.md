@@ -20,8 +20,9 @@ data.head(3)
 |  0 | 314 - 367 | PCOR         |              | Basal Cambrian |              |      1.1e+07 |         0 |         0 |          0 |          0 |            0 |       202396 |         4877 |          290 |    0.037079  |      34      |          1 | Atlas V, v1  |         1 |           0 |            0 |        40000 |        1e+08 |
 |  1 | 314 - 366 | PCOR         |              | Basal Cambrian |              |      8.3e+07 |         0 |         0 |          0 |          0 |            0 |       201717 |         4392 |          294 |    0.0355396 |      15.6667 |          1 | Atlas V, v1  |         1 |           0 |            0 |        40000 |        1e+08 |
 |  2 | 314 - 365 | PCOR         |              | Basal Cambrian |              |      9.3e+07 |         0 |         0 |          0 |          0 |            0 |       200875 |         3795 |          299 |    0.0353897 |      16.9333 |          1 | Atlas V, v1  |         1 |           0 |            0 |        40000 |        1e+08 |
-
 #
+### calculate Canadian CO2 capacity estimate
+
 The Canadian saline aquifers will under attribute Partnership – PCOR and the seven saline aquifers of RESOURCE_N attribute Basal Cambrian, Beaverhill Lake Group, Elk Point Group, Rundle Group, Viking, Winterburn Group, and Woodbend Group.
 
 ```py
@@ -85,6 +86,8 @@ sum_co2.to_file(r"sum_co2/sum_co2.shp")
 sum_co2.to_file(r"sum_co2/sum_co2.csv",driver='CSV')
 ```
 #
+### create Shapefiles and csv to each Canadian saline aquifers
+
 Create Shapefiles and CSV containing lat longs of each of the seven Canadian saline aquifers (Seven shapefiles, seven CSV) with Keep all existing attribute values.
 
 ```py
