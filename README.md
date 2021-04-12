@@ -1,1 +1,2 @@
-# Calculation-Canadian-CO2-capacity-estimate
+# Calculation Canadian CO2 capacity estimate
+I have a shapefile named saline10k_1502 that contains a low, medium, and high calculated estimate CO2 storage potential in saline aquifers in North America, I am only interested in the Canadian CO2 storage, I will create a shapefile containing the total CO2 capacity estimate for a given cell, Because the aquifers are stacked there are aquifers that overlap each other and I am looking for the sum of all the saline aquifer CO2 capacity estimates in each cell.
