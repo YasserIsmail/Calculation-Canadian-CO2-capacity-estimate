@@ -20,7 +20,8 @@ data.head(3)
 |  1 | 314 - 366 | PCOR         |              | Basal Cambrian |              |      8.3e+07 |         0 |         0 |          0 |          0 |            0 |       201717 |         4392 |          294 |    0.0355396 |      15.6667 |          1 | Atlas V, v1  |         1 |           0 |            0 |        40000 |        1e+08 |
 |  2 | 314 - 365 | PCOR         |              | Basal Cambrian |              |      9.3e+07 |         0 |         0 |          0 |          0 |            0 |       200875 |         3795 |          299 |    0.0353897 |      16.9333 |          1 | Atlas V, v1  |         1 |           0 |            0 |        40000 |        1e+08 |
 
-## The Canadian saline aquifers will under attribute Partnership – PCOR and the seven saline aquifers of RESOURCE_N attribute Basal Cambrian, Beaverhill Lake Group, Elk Point Group, Rundle Group, Viking, Winterburn Group, and Woodbend Group.
+## 
+The Canadian saline aquifers will under attribute Partnership – PCOR and the seven saline aquifers of RESOURCE_N attribute Basal Cambrian, Beaverhill Lake Group, Elk Point Group, Rundle Group, Viking, Winterburn Group, and Woodbend Group.
 ```py
 canadian_data = data.loc[(data['RESOURCE_N']=='Basal Cambrian')|(data['RESOURCE_N']=='Beaverhill Lake Group')|(data['RESOURCE_N']=='Elk Point Group')|(data['RESOURCE_N']=='Rundle Group')|(data['RESOURCE_N']=='Viking')|(data['RESOURCE_N']=='Winterburn Group')|(data['RESOURCE_N']=='Woodbend Group')|(data['PARTNERSHI']=='PCOR')]
 ```
@@ -40,13 +41,13 @@ sum_co2.head(3)
 | (-1326251.7400000002, 1333935.68) | POLYGON ((-1331251.74 1328935.68, -1331251.74 1338935.68, -1321251.74 1338935.68, -1321251.74 1328935.68, -1331251.74 1328935.68)) | 3.19865e+06 | 6.05149e+06 | 1.0374e+07  |  1.79924e+07 |
 | (-1326251.7400000002, 1343935.68) | POLYGON ((-1331251.74 1338935.68, -1331251.74 1348935.68, -1321251.74 1348935.68, -1321251.74 1338935.68, -1331251.74 1338935.68)) | 8.07035e+06 | 1.52682e+07 | 2.61741e+07 |  5.54231e+07 |
 
-### reading "saline10k_1502.shp"
-goodbye spatial _id 👋
+### re-indexing & delete spatial _id 
 ```py
 sum_co2.reset_index(inplace=True)
 sum_co2.drop(columns=['spatial_id'],inplace=True)
 sum_co2.head(3)
 ```
+goodbye spatial _id
 |    | geometry                                                                                                                           |     VOL_LOW |     VOL_MED |    VOL_HIGH |   RSC_AREA_C |
 |---:|:-----------------------------------------------------------------------------------------------------------------------------------|------------:|------------:|------------:|-------------:|
 |  0 | POLYGON ((-1341251.74 1358935.68, -1341251.74 1368935.68, -1331251.74 1368935.68, -1331251.74 1358935.68, -1341251.74 1358935.68)) | 0           | 0           | 0           |  1.85008e+06 |
