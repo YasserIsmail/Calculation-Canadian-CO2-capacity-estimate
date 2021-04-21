@@ -32,7 +32,7 @@ canadian_data = data.loc[(data['RESOURCE_N']=='Basal Cambrian')|(data['RESOURCE_
 Create a Shapefile and CSV containing lat longs of total Canadian CO2 capacity estimate I will calculate it by Summation of VOL_LOW, VOL_MED, VOL_HIGH, and RSC_AREA_C for each Cell or the Cells that overlap in the same location.
 
 ```py
-co2 = canadian_data[['VOL_LOW','VOL_MED','VOL_HIGH','RSC_AREA_C','geometry','RESOURCE_N']]
+co2 = canadian_data[['VOL_LOW','VOL_MED','VOL_HIGH','RSC_AREA_C','geometry']]
 ```
 Here is I will create a "spatial_id" column to create an ID to cells so the cells overlapped will have one ID (or spatial ID 😉), Then I will implement aggregation with dissolve based on my spatial ID.
 
